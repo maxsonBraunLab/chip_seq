@@ -1,0 +1,8 @@
+name: preseq
+channels:
+  - defaults
+  - bioconda
+  - anaconda
+  - conda-forge
+dependencies:
+  - preseq=3.1.2

@@ -1,0 +1,22 @@
+# pipeline config ---------------------------------------------------------------------------------
+
+# please adjust content of these files, though their paths should be constants.
+FASTQ_SCREEN_CONFIG: "data/config/fastq_screen_config.tsv"
+MULTIQC_CONFIG: "data/config/multiqc_config.yaml"
+DESEQ2_CONFIG: "data/config/deseq2_config.tsv"
+
+# read alignment + preprocessing ------------------------------------------------------------------
+
+GENOME: "/home/groups/MaxsonLab/indices/GRch38/bowtie2/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.bowtie_index"
+ASSEMBLY: "hg38" # [hg38, hg38]
+
+# Problematic regions of the genome to exclude from the analysis.
+BANLIST: "/home/groups/MaxsonLab/indices/GRch38/hg38.blacklist.v2.bed"
+
+# peak calling ------------------------------------------------------------------------------------
+
+# number of times a peak needs to appear across reps in one condition. helps build consensus peak.
+N_INTERSECTS: 2
+
+# size of the genome for macs2 peak calling
+GSIZE: "2.7e9"
